@@ -1,0 +1,333 @@
+/*Reset styles*/
+body{
+  margin:0;
+  padding: 0;
+
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  color:black;
+  background-color: #f6f6f6;
+  font-weight:lighter;
+  
+}
+a,a:hover,a:visited,a:active{
+  text-decoration: none;
+  color:black;
+  display:block;
+}
+
+/*Navigation Styles*/
+header{
+
+  width:80vw;
+  margin:0 auto;
+  padding: 0;
+  box-shadow: 0px 4px 11px -1px #ECECEC;
+
+  position:relative;
+
+  font-size:18px;
+  font-weight:bold;
+  background-color: white;
+  
+  
+}
+
+.logo a{
+  padding: 5px 0 0;
+}
+nav {
+  background: rgba(160, 162, 183, 0.9) none repeat scroll 0 0;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  display: none;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 20px;
+  padding: 0;
+  
+  list-style:none;
+    
+}
+
+nav ul li a{
+  padding: 20px;
+  margin-left: 10px;
+
+  text-align:center;
+}
+
+nav ul li a:hover{
+  color:#e9212e;
+}
+.nav-wrapper{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+.logo img{width:70%;}
+/*mobile navigation*/
+#toggle:checked ~ nav {
+  /* A toggled state! No JavaScript! */
+  
+  transition: ease-in-out;
+  transition-timing-function: cubic-bezier(0,.67,.86,.04);
+  display: block;
+}
+
+label {
+  display: block;
+  background-image: url("../images/mobile-menu.svg");
+  background-repeat: no-repeat;
+  background-size:contain;
+  height:72px;
+  width: 72px;
+  position: absolute;
+  top:.5rem;
+  right:.5rem;
+  z-index: 3;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -100vw;
+  
+  /* Note, you may want to position the checkbox over top the label and set the opacity to zero instead. It can be better for accessibilty on some touch devices for discoverability. */
+}
+
+/*Main section styles*/
+main{
+  width: 80vw;
+  margin:0 auto;
+ 
+}
+section{
+  margin:1.5rem 0;
+  background-color: white;
+}
+/*Banner section styles*/
+.discription{
+  position: relative;
+  display: block;
+  z-index: 1;
+  padding:2rem;
+
+  background: url("../images/banner.jpg")  no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color:white;
+ 
+
+}
+.discription::before{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+
+  background: rgba(40, 41, 46, 0.6) none repeat scroll 0 0;
+  
+
+}
+
+.discription h1{
+  font-size:24px;
+  margin: 0;
+}
+.discription p{
+  font-size: 18px;
+  font-style: italic;
+}
+.discription a{
+  background-color:#e9212e ;
+  color:white;
+  padding: 20px;
+}
+
+.banner-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.banner-content article{
+  width:100%;
+}
+/*footer styles*/
+footer{
+  padding:20px 0;
+  width:100%;
+  margin:0 auto;
+
+  text-align:center;
+  font-weight: bold;
+  background-color: white;
+  font-size:12px;
+ 
+}
+
+/*our work section styles*/
+figure {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  flex-basis: 320px;
+
+  margin: 0 0 1rem;
+
+  position: relative;
+
+}
+
+figcaption {
+  padding: 5px;
+
+  position: absolute;
+  bottom:0;
+  width:96%;
+
+  background-color: rgba(40, 41, 46, 0.6);
+  color: #fff;
+
+  text-align: center;
+}
+.image-gallery{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap:wrap;
+  padding:1.5rem;
+}
+.image-gallery img{
+  width:100%;
+  min-height:225px;
+}
+h2{
+  font-size:24px;
+  padding: 20px;
+  margin: 0;
+}
+
+
+/*button styles*/
+.button{
+  width: 90px;
+  margin:.5rem auto;
+  background-color: #e9212e;
+  color: white !important;
+  font-weight: bold;
+  
+  
+}
+.button:hover{
+  background-color: dimgray;
+}
+.logo{
+  padding: 10px;
+}
+
+/*Testimonial syles*/
+.card {
+
+  background-color:white;
+  color:black;
+  padding: 2rem;
+  height: 310px;
+  text-align: center;
+  box-shadow: 0px 2px 10px 3px #f6f6f6;
+}
+.cards {
+  
+  margin: 0 auto;
+  padding:1rem;
+/* setting minimum size using a variable*/
+  --auto-grid-min-size: 16rem;
+  display: grid;
+/*defining coloumns using minmax of variable*/
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 1rem;
+}
+.cards-image{
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  margin: 2rem auto;
+  border-radius: 50%;
+
+}
+.card p {
+  max-width: 25ch;
+  margin: 0 auto;
+}
+.cards-name h3{
+  color:red;
+  margin: 0;
+}
+.cards-image img{
+  width: 100%;
+  transition: transform 2s;
+}
+.cards-image img:hover{
+  transform: rotate(360deg);
+}
+/* .inner-content div{
+  margin:2rem auto;
+} */
+
+/*desktop specific styles*/
+@media screen and (min-width: 600px) {
+  .logo img{
+    width:auto;
+  }
+  figcaption {
+    width:310px;
+  }
+  
+  .banner-content article {
+      width: 70%;
+  }
+  .discription {
+    padding: 5rem;
+  }
+  .discription h1 {
+    font-size: 60px;
+  }
+
+  .discription p {
+    font-size: 24px;
+  }
+  
+}
+@media (min-width: 1200px) {
+  /* Desktop navigation*/
+  .nav-wrapper {
+    flex-wrap: wrap;
+    flex-direction: row;
+
+  }
+  nav {
+    background:none;
+    position: relative;
+    width: auto;
+    z-index: 2;
+    display: block;
+  }
+  .visually-hidden {display:none;}
+  label {
+    display: none;
+  }
+  nav ul {
+    flex-direction: row;
+  }
+.button{margin: 0 .5rem;}
+}
