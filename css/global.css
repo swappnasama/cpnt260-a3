@@ -15,7 +15,9 @@ a,a:hover,a:visited,a:active{
   color:black;
   display:block;
 }
-
+ul{
+  list-style: none;
+}
 /*Navigation Styles*/
 header{
 
@@ -32,21 +34,40 @@ header{
   
   
 }
-
+/* Header flex syles */
+.nav-wrapper{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+/* Logo styles */
 .logo a{
   padding: 5px 0 0;
 }
+
+.logo img{
+  width:70%;
+}
+.logo{
+  padding: 10px;
+}
+/* Nav styles */
 nav {
-  background: rgba(160, 162, 183, 0.9) none repeat scroll 0 0;
+  display: none;
   position: absolute;
   width: 100%;
   z-index: 2;
-  display: none;
+
+  background: rgba(160, 162, 183, 0.9) none repeat scroll 0 0;
+  
 }
+/* Navigation flex */
 nav ul{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+
   margin: 20px;
   padding: 0;
   
@@ -54,6 +75,7 @@ nav ul{
     
 }
 
+/* Navigation link styles */
 nav ul li a{
   padding: 20px;
   margin-left: 10px;
@@ -64,29 +86,26 @@ nav ul li a{
 nav ul li a:hover{
   color:#e9212e;
 }
-.nav-wrapper{
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  
-}
-.logo img{width:70%;}
+
 /*mobile navigation*/
 #toggle:checked ~ nav {
-  /* A toggled state! No JavaScript! */
-  
+  display: block;
+
+  /*Trasitioining Nav bar*/
   transition: ease-in-out;
   transition-timing-function: cubic-bezier(0,.67,.86,.04);
-  display: block;
+  
 }
 
 label {
   display: block;
+  height:72px;
+  width: 72px;
+
   background-image: url("../images/mobile-menu.svg");
   background-repeat: no-repeat;
   background-size:contain;
-  height:72px;
-  width: 72px;
+  
   position: absolute;
   top:.5rem;
   right:.5rem;
@@ -97,9 +116,33 @@ label {
   position: absolute;
   left: -100vw;
   
-  /* Note, you may want to position the checkbox over top the label and set the opacity to zero instead. It can be better for accessibilty on some touch devices for discoverability. */
+}
+/* social links styles */
+.social-links{
+  padding: 0 2rem 1.5rem;
 }
 
+.social-links ul{
+  display: flex;
+  justify-content: end;
+  margin: 0;
+  padding: 0;
+}
+.social-links ul li a{
+  margin:0 0 0 5px
+}
+.social-links ul li a i{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: black;
+  color: white;
+  font-size: 14px;
+  line-height: 50px;
+  text-align: center;
+}
 /*Main section styles*/
 main{
   width: 80vw;
@@ -108,13 +151,15 @@ main{
 }
 section{
   margin:1.5rem 0;
+
   background-color: white;
 }
 /*Banner section styles*/
 .discription{
   position: relative;
-  display: block;
   z-index: 1;
+
+  display: block;
   padding:2rem;
 
   background: url("../images/banner.jpg")  no-repeat;
@@ -122,6 +167,7 @@ section{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
   color:white;
  
 
@@ -129,6 +175,7 @@ section{
 .discription::before{
   height: 100%;
   width: 100%;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -142,6 +189,7 @@ section{
 
 .discription h1{
   font-size:24px;
+
   margin: 0;
 }
 .discription p{
@@ -151,7 +199,10 @@ section{
 .discription a{
   background-color:#e9212e ;
   color:white;
+
   padding: 20px;
+  margin: 0 auto;
+  width:150px;
 }
 
 .banner-content{
@@ -162,6 +213,7 @@ section{
 }
 .banner-content article{
   width:100%;
+  text-align: center;
 }
 /*footer styles*/
 footer{
@@ -174,6 +226,77 @@ footer{
   background-color: white;
   font-size:12px;
  
+}
+
+h2{
+  font-size:24px;
+  padding: 1rem 1rem .5rem;
+  margin: 0;
+}
+/*button styles*/
+.button{
+  width: 90px;
+  margin:.5rem auto;
+
+  background-color: #e9212e;
+  
+  color: white !important;
+  font-weight: bold;
+  
+  
+}
+.button:hover{
+  background-color: dimgray;
+}
+
+
+/*Testimonial syles*/
+.card {
+
+  padding: 2rem;
+  min-height: 310px;
+
+  background-color:white;
+
+  color:black;
+  text-align: center;
+
+  box-shadow: 0px 2px 10px 3px #f2f2f2;
+}
+.cards {
+  
+  margin: 0 auto;
+  padding:1rem;
+/* setting minimum size using a variable*/
+  --auto-grid-min-size: 16rem;
+  display: grid;
+/*defining coloumns using minmax of variable*/
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 1rem;
+}
+.cards-image{
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  margin: 2rem auto;
+
+  border-radius: 50%;
+
+}
+.card p {
+  max-width: 25ch;
+  margin: 0 auto;
+}
+.cards-name h3{
+  color:red;
+  margin: 0;
+}
+.cards-image img{
+  width: 100%;
+  transition: transform 2s;
+}
+.cards-image img:hover{
+  transform: rotate(360deg);
 }
 
 /*our work section styles*/
@@ -212,87 +335,17 @@ figcaption {
   width:100%;
   min-height:225px;
 }
-h2{
-  font-size:24px;
-  padding: 20px;
-  margin: 0;
-}
-
-
-/*button styles*/
-.button{
-  width: 90px;
-  margin:.5rem auto;
-  background-color: #e9212e;
-  color: white !important;
-  font-weight: bold;
-  
-  
-}
-.button:hover{
-  background-color: dimgray;
-}
-.logo{
-  padding: 10px;
-}
-
-/*Testimonial syles*/
-.card {
-
-  background-color:white;
-  color:black;
-  padding: 2rem;
-  height: 310px;
-  text-align: center;
-  box-shadow: 0px 2px 10px 3px #f2f2f2;
-}
-.cards {
-  
-  margin: 0 auto;
-  padding:1rem;
-/* setting minimum size using a variable*/
-  --auto-grid-min-size: 16rem;
-  display: grid;
-/*defining coloumns using minmax of variable*/
-  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-  grid-gap: 1rem;
-}
-.cards-image{
-  overflow: hidden;
-  width: 100px;
-  height: 100px;
-  margin: 2rem auto;
-  border-radius: 50%;
-
-}
-.card p {
-  max-width: 25ch;
-  margin: 0 auto;
-}
-.cards-name h3{
-  color:red;
-  margin: 0;
-}
-.cards-image img{
-  width: 100%;
-  transition: transform 2s;
-}
-.cards-image img:hover{
-  transform: rotate(360deg);
-}
-/* .inner-content div{
-  margin:2rem auto;
-} */
-
 /*desktop specific styles*/
 @media screen and (min-width: 600px) {
+  /* Logo styles */
   .logo img{
     width:auto;
   }
+  /* our section styles */
   figcaption {
-    width:310px;
+    min-width:310px;
   }
-  
+  /* banner styles */
   .banner-content article {
       width: 70%;
   }
@@ -304,10 +357,24 @@ h2{
   }
 
   .discription p {
-    font-size: 24px;
+    font-size: 28px;
   }
   
 }
+
+/* styles specific for screens with width 600px to 1000px */
+@media screen and (min-width: 600px) and (max-width:1000px){
+  /*banner styles*/
+  .discription h1 {
+    font-size: 40px;
+  }
+
+  .discription p {
+    font-size: 20px;
+  }
+
+}
+/* Stylels specific for screens larger than 1200px */
 @media (min-width: 1200px) {
   /* Desktop navigation*/
   .nav-wrapper {
@@ -322,7 +389,9 @@ h2{
     z-index: 2;
     display: block;
   }
-  .visually-hidden {display:none;}
+  .visually-hidden {
+    display:none;
+  }
   label {
     display: none;
   }
