@@ -14,6 +14,7 @@ a,a:hover,a:visited,a:active{
   text-decoration: none;
   color:black;
   display:block;
+  outline: none; 
 }
 ul{
   list-style: none;
@@ -21,7 +22,8 @@ ul{
 /*Navigation Styles*/
 header{
 
-  width:80vw;
+  width:100vw;
+  max-width:100%;
   margin:0 auto;
   padding: 0;
   box-shadow: 0px 4px 11px -1px #ECECEC;
@@ -38,7 +40,7 @@ header{
 .nav-wrapper{
   display:flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   
 }
 /* Logo styles */
@@ -51,6 +53,7 @@ header{
 }
 .logo{
   padding: 10px;
+  text-align: center;
 }
 /* Nav styles */
 nav {
@@ -60,6 +63,8 @@ nav {
   z-index: 2;
 
   background: rgba(160, 162, 183, 0.9) none repeat scroll 0 0;
+ 
+  top:-5px;
   
 }
 /* Navigation flex */
@@ -90,10 +95,9 @@ nav ul li a:hover{
 /*mobile navigation*/
 #toggle:checked ~ nav {
   display: block;
-
+  transition: all 1s ease-out;
   /*Trasitioining Nav bar*/
-  transition: ease-in-out;
-  transition-timing-function: cubic-bezier(0,.67,.86,.04);
+  
   
 }
 
@@ -107,8 +111,8 @@ label {
   background-size:contain;
   
   position: absolute;
-  top:.5rem;
-  right:.5rem;
+  top:0;
+  left:0;
   z-index: 3;
 }
 
@@ -119,12 +123,12 @@ label {
 }
 /* social links styles */
 .social-links{
-  padding: 0 2rem 1.5rem;
+  padding: 0 0 1.2rem;
 }
 
 .social-links ul{
   display: flex;
-  justify-content: end;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -134,14 +138,23 @@ label {
 .social-links ul li a i{
   position: relative;
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
+
   border-radius: 50%;
-  background: black;
-  color: white;
+
+  background:black ;
+  color:white;
   font-size: 14px;
-  line-height: 50px;
+  line-height: 35px;
   text-align: center;
+
+  transition: all 700ms ease 100ms;
+}
+.social-links ul li a:hover  i{
+  background:#e9212e ;
+
+  transform: rotate(360deg);
 }
 /*Main section styles*/
 main{
@@ -326,10 +339,10 @@ figcaption {
 }
 .image-gallery{
   display:flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap:wrap;
-  padding:1.5rem;
+  padding:1rem;
 }
 .image-gallery img{
   width:100%;
@@ -388,6 +401,7 @@ figcaption {
     width: auto;
     z-index: 2;
     display: block;
+    top:0;
   }
   .visually-hidden {
     display:none;
@@ -397,6 +411,10 @@ figcaption {
   }
   nav ul {
     flex-direction: row;
+  }
+  /* social links */
+  .social-links{
+    padding: 2.2rem;
   }
 .button{margin: 0 .5rem;}
 }

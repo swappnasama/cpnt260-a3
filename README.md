@@ -1,7 +1,6 @@
 # WBDV WINTER 2021 - CPNT 260 Assignment 3: Image gallery and social icons
 
-- Adding an additional content block containing a gallery of 9-12 images/figures;
-- Adding a social media links menu.
+Adding an additional content block containing a gallery of 9-12 images/figures and adding a social media links menu.
 
 **Author and Repo maintainer:** Swapna Sama
 
@@ -13,7 +12,7 @@
 
 Beautiful Homes is interior designing and home staging company. They want to build a e-marketing website to expand their customer range. Website describes all the information about company's contact information, Employee, Gallery and testimonials.
 
-Our Creations section is a image gallery which shows the unique interior designs created by Beautiful Homes.
+Our Creations section is a image gallery which shows the unique interior designs created by Beautiful Homes. Click on "Our Creations" link in navigation to go to Our Creations section.
 
 ## Attributions :
 
