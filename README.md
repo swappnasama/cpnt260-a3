@@ -1,6 +1,6 @@
 # WBDV WINTER 2021 - CPNT 260 Assignment 3: Image gallery and social icons
 
-Adding an additional content block containing a gallery of 9-12 images/figures and adding a social media links menu.
+Adding an additional content block containing a gallery of 9-12 images/figures and a social media links menu.
 
 **Author and Repo maintainer:** Swapna Sama
 
